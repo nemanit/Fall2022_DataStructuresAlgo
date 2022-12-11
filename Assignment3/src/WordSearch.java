@@ -38,10 +38,11 @@ class Solution {
 
         board[row][col] = '*';
 
-        boolean exists = dfsBoardChar(board,wordCharArray, index + 1, row + 1,col) || dfsBoardChar(board,wordCharArray,index + 1, row - 1, col)
-                || dfsBoardChar(board, wordCharArray, index + 1, row, col + 1) || dfsBoardChar(board, wordCharArray,index + 1, row, col - 1);
+        boolean exists = dfsBoardChar(board, wordCharArray, index + 1, row + 1, col) || dfsBoardChar(board, wordCharArray, index + 1, row - 1, col)
+                || dfsBoardChar(board, wordCharArray, index + 1, row, col + 1) || dfsBoardChar(board, wordCharArray, index + 1, row, col - 1);
 
         board[row][col] = wordCharArray[index];
 
         return exists;
     }
+}

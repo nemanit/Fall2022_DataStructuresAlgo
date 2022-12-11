@@ -48,10 +48,10 @@ public class BinTree<T> {
 
                 if (currentNode.left != null) {
                     queue.add(currentNode.left);
-                    currentNode.parent = hashMapParent.get(Integer.parseInt(currentNode.data.toString()));
+                    currentNode.parent = new Node( hashMapParent.get(Integer.parseInt(currentNode.data.toString())));
                 }
                 if (currentNode.right != null) {
-                    currentNode.parent = hashMapParent.get(Integer.parseInt(currentNode.data.toString()));                }
+                    currentNode.parent = new Node(hashMapParent.get(Integer.parseInt(currentNode.data.toString())));                }
             }
         }
     }
